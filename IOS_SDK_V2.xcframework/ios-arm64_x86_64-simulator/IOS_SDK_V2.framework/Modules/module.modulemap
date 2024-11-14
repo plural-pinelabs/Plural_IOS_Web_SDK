@@ -1,0 +1,6 @@
+framework module IOS_SDK_V2 {
+  umbrella header "IOS_SDK_V2.h"
+  export *
+
+  module * { export * }
+}

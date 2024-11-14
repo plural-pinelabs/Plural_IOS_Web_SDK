@@ -1,0 +1,91 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios16-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IOS_SDK_V2
+import Foundation
+@_exported import IOS_SDK_V2
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers final public class Toas {
+  final public var backgroundColor: UIKit.UIColor
+  final public var font: UIKit.UIFont
+  final public var textColor: UIKit.UIColor
+  final public var textInsets: UIKit.UIEdgeInsets
+  final public var cornerRadius: CoreFoundation.CGFloat
+  final public var bottomPadding: CoreFoundation.CGFloat
+  final public var minimumHorizontalPadding: CoreFoundation.CGFloat
+  final public var duration: CoreFoundation.CGFloat
+  public static let `default`: IOS_SDK_V2.Toas
+  final public func show(text: Swift.String, duration: Swift.Double)
+  final public func dismiss(animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class Constants : ObjectiveC.NSObject {
+  public static let RETURN_URL: Swift.String
+  public static let MESSAGE_INTERNET_NOT_AVAILABLE: Swift.String
+  public static let THEME_ID: Swift.String
+  public static let IS_HEADER_TO_BE_SHOW: Swift.String
+  public static let THEME_DEFAULT: Swift.Int
+  public static let IS_HEADER_TO_BE_SHOW_VALUE: Swift.Bool
+  public static let NO_THEME_PRESENT: Swift.Int
+  public static let PostFormID: Swift.String
+  public static let REQUEST_CODE_PAYMENT: Swift.Int
+  public static let CANCEL_TRANSACTION: Swift.String
+  public static let ALERT_MESSAGE: Swift.String
+  public static let Timeout: Swift.String
+  public static let SERVER_NOT_FOUND: Swift.String
+  public static let URL_NOT_FOUND: Swift.String
+  public static var MY_PERMISSIONS_REQUEST_RECEIVE_SMS: Swift.Int
+  public static let NO_INTERNET: Swift.String
+  public static let INTERNET: Swift.String
+  public static let LOINACTION: Swift.String
+  public static let ACTIVITY_INDICATOR_VIEW_TEXT: Swift.String
+  public static let ZOOM_IN_DISABLE: Swift.String
+  public static let PINE_PG_PAYMENT_URL_TEST_SANDBOX: Swift.String
+  public static let PINE_PG_RETURN_URL_TEST_SANDBOX: Swift.String
+  public static let PINE_PG_PAYMENT_URL_PRODUCTION: Swift.String
+  public static let PINE_PG_RETURN_URL_PRODUCTION: Swift.String
+  public static let PINE_PG_PAYMENT_URL_SANDBOX: Swift.String
+  public static let PINE_PG_RETURN_URL_SANDBOX: Swift.String
+  public static let HDFC_URL: Swift.String
+  public static let SBI_URL: Swift.String
+  public static let PNB_URL: Swift.String
+  public static let ALLAHABAD_URL: Swift.String
+  public static let RC_INTERNET_NOT_CONNECTED: Swift.Int
+  public static let RC_FAILURE: Swift.Int
+  public static var internet_connection: Swift.Bool
+  public static let RM_INTERNET_NOT_CONNECTED: Swift.String
+  public static let RM_FAILURE: Swift.String
+  public static let IS_PRODUCTION_REQUEST: Swift.String
+  public static let REQUEST_AGENT_ANDROID_APP: Swift.String
+  public static let EXCEPTON_OCCUR: Swift.String
+  public static let HTTP_ERROR: Swift.String
+  public static let PINE_PG_RETURN_URL: Swift.String
+  public static let FORM_POST_MERCHANT_RETURN_URL_TAG: Swift.String
+  public static let BACK_PRESS_BUTTON: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class EdgeControler {
+  public init()
+  public func startPayment(from viewController: UIKit.UIViewController, withURL urlString: Swift.String, callBack: any IOS_SDK_V2.ResponseCallback)
+  @objc deinit
+}
+@objc public protocol ResponseCallback {
+  @objc func internetNotAvailable(code: Swift.Int, message: Swift.String)
+  @objc func onErrorOccured(code: Swift.Int, message: Swift.String)
+  @objc func onTransactionResponse()
+  @objc func onCancelTxn(code: Swift.Int, message: Swift.String)
+  @objc func onPressedBackButton(code: Swift.Int, message: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class WebViewController : UIKit.UIViewController, WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency public static let ALERT_MESSAGE: Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
