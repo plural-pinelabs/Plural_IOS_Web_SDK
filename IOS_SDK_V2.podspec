@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'IOS_SDK_V2'
-    spec.version      = '0.1.2'
+    spec.version      = '0.1.3'
     spec.license      = "MIT"
     spec.homepage     = 'https://github.com/souravshandilya-pinelabs/PinePGSDK'
     spec.authors      = { 'Sourav Shandilya' => 'sourav.shandilya@pinelabs.com' }
